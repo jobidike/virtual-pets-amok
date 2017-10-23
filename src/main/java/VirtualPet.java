@@ -1,66 +1,57 @@
 
 public abstract class VirtualPet {
-	
+
 	// instance data
-		protected String name;
-		protected String description;
-		protected int hunger;
-		protected int waste;
-		protected int boredom;
-		protected int thirst;
-		protected int happiness;
-		
-		protected int overallHealth = 10;
+	protected String name;
+	protected String description;
+	protected int play;
+	protected int health;
+	protected int happiness;
 
-		// constructor
-		public VirtualPet(String name, String description, int hunger, int waste, int boredom, int thirst, int health, int happiness) {
-			this.name = name;
-			this.description = description;
-			this.hunger = hunger;
-			this.waste = waste;
-			this.boredom = boredom;
-			this.thirst = thirst;
-			this.happiness = happiness;
-			
-		}
+	// constructor
+	public VirtualPet(String name, String description, int play, int health, int happiness) {
+		this.name = name;
+		this.description = description;
+		this.play = play;
+		this.health = health;
+		this.happiness = happiness;
+	}
 
-		// Accessor method (getter)
-		public String getName() {
-			return name;
-		}
+	// Accessor method (getter)
+	public String getName() {
+		return name;
+	}
 
-		public String getDescription() {
-			return description;
-		}
+	public String getDescription() {
+		return description;
+	}
 
-		public int getHunger() {
-			return hunger;
-		}
+	public int getPlay() {
+		return play;
+	}
 
-		public int getWaste() {
-			return waste;
-		}
+	public int getHealth() {
+		return health;
+	}
 
-		public int getBoredom() {
-			return boredom;
-		}
+	public int getHappiness() {
+		return happiness;
+	}
 
-		public int getThirst() {
-			return thirst;
-		}
-		public int getHappiness() {
-			return happiness;
-		}
-		
-		public int getOverallHealth() {
-			return overallHealth;
-		}
-		
-		abstract int cleanPet();
-		
+	public void playWithAPet() {
+		happiness += 5;
+		health += 6;
+		play -= 5;
+	}
+
+	public void tick() {
+		happiness += 5;
+		health += 5;
+	}
+
 	@Override
 	public String toString() {
-		return name + "\t" + description;
+		return name + "\t" + description + " \t" + play + " \t" + health + "\t" + happiness;
 	}
-		
+
 }

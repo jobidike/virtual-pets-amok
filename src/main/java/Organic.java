@@ -1,7 +1,8 @@
 
 public interface Organic {
-	
-	public void food();
-	public void water();
+
+	public void feedOrganicPets();
+
+	public void waterOrganicPets();
 
 }

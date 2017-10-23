@@ -1,6 +1,6 @@
 
 public interface Robot {
-	
-	public void oil();
+
+	public void oilRoboPets();
 
 }
