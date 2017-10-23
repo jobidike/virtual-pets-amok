@@ -3,8 +3,6 @@ import java.util.Scanner;
 public class VirtualPetShelterApp {
 
 	static String selection;
-	// static String newPet;
-	// static String newPetDescription;
 	static Scanner input = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -32,7 +30,6 @@ public class VirtualPetShelterApp {
 		System.out.println("Welcome to the home of JJ's Virtual Pet shelter!");
 
 		petStats(shelter);
-		// petStats2(shelter);
 
 		listOptions();
 		int choice = input.nextInt();
@@ -134,7 +131,7 @@ public class VirtualPetShelterApp {
 				"Name  |Description |Play    |Health |Happiness|Hunger  |Thirst|OilLevel/CageWaste/LitterWaste");
 		System.out.println(
 				"------|------------|--------|-------|---------|--------|------|------------------------------");
-		// for (VirtualPet current : shelter.allPets()) {
+
 		for (VirtualPet currentOrganicCat : shelter.allPets()) {
 			if (currentOrganicCat instanceof OrganicCat) {
 				System.out.println(currentOrganicCat);
